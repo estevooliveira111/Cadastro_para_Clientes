@@ -48,6 +48,39 @@ function scroll(e) {
   animarScroll(this.scrollTop, posicao);
 }
 
+
+
+
+
+function projects(el) {
+      var display = document.getElementById(el).style.display;
+      if (display == "none")
+        document.getElementById(el).style.display = 'block';
+      else
+        document.getElementById(el).style.display = 'none';
+    }
+    
+    var ancoras = document.querySelectorAll('a');
+Array.from(ancoras).forEach(function(a) {
+  a.addEventListener('click', scroll);
+});
+
+function animarScroll(atual, destino) {
+  if (atual >= destino) return;
+  document.body.scrollTop = atual;
+  setTimeout(function() {
+    animarScroll(atual += 1000, destino);
+  }, 50);
+}
+
+function scroll(e) {
+  e.preventDefault();
+  var id = this.getAttribute('href');
+  var el = document.querySelector(id);
+  var posicao = el.getBoundingClientRect().top;
+  animarScroll(this.scrollTop, posicao);
+}
+
 </script>
 
 </head>
@@ -56,7 +89,7 @@ function scroll(e) {
 
     <div class="initial-scale" >
 
-        <a href="#" class="t1">
+        <a onclick="projects('projects')" href="#projects" class="t1">
 
             <h1>Projetos</h1><br><br>
             <p>“Não se trata de ter ideias,<br />  mas sim de levar essas ideias para a vida real.”<br /><br><br>  — Scott Belsky, cofundador do Behance.</p>
@@ -91,6 +124,22 @@ function scroll(e) {
         <a href="#" class="t1">
             <h1>Papeis</h1>
         </a>
+
+    </div>
+
+
+
+    <div id="projects" style="display: none;" class="t3">
+
+
+        <form action="" method="post">
+
+            <label for="Nome">Titulo</label>
+            <input type="text" name="Nome" id="">
+
+            <input type="button" value="Salvar">
+
+        </form>
 
     </div>
 
@@ -150,6 +199,6 @@ function scroll(e) {
         </table>
 
     </div>
-    
+
 </body>
 </html>
