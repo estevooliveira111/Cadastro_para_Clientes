@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<script>
+
+function formulario(el) {
+      var display = document.getElementById(el).style.display;
+      if (display == "none")
+        document.getElementById(el).style.display = 'block';
+      else
+        document.getElementById(el).style.display = 'none';
+    }
+
+    var ancoras = document.querySelectorAll('a');
+Array.from(ancoras).forEach(function(a) {
+  a.addEventListener('click', scroll);
+});
+
+function animarScroll(atual, destino) {
+  if (atual >= destino) return;
+  document.body.scrollTop = atual;
+  setTimeout(function() {
+    animarScroll(atual += 50, destino);
+  }, 50);
+}
+
+function scroll(e) {
+  e.preventDefault();
+  var id = this.getAttribute('href');
+  var el = document.querySelector(id);
+  var posicao = el.getBoundingClientRect().top;
+  animarScroll(this.scrollTop, posicao);
+}
+
+</script>
+
+
+<style>
+
+
+    .t4 {
+      display: block;
+      height: 200px;
+      margin: 20px;
+      background-color: #dff;
+    }
+    
+    </style>
+    
+    
+
+</head>
+
+<body>
+
+    <div class="initial-scale" >
+
+        <a href="#" class="t1">
+
+            <h1>Projetos</h1><br><br>
+            <p>“Não se trata de ter ideias,<br />  mas sim de levar essas ideias para a vida real.”<br /><br><br>  — Scott Belsky, cofundador do Behance.</p>
+
+        </a>
+
+        <a href="#key" class="t1">
+
+            <h1>Chaves</h1>
+
+            <p>Se não tivermos a chave<br> não podemos abrir<br> aquilo que não temos com que abrir,<br> então do que adiantaria<br> encontrar aquilo que   precisa se aberto,<br> e que não temos,<br> sem primeiro encontrar a chave que o abra?</p>
+
+        </a>
+
+        <a class="t1" href="http://">
+    
+            <h1>Bíblia</h1>
+    
+        </a>
+
+        <a href="/index.html" class="t1">
+            <h1>Caixas</h1>
+
+
+
+        </a>
+
+        <a href="/index.html" class="t1">
+            <h1>Escritos</h1>
+        </a>
+
+        <a href="/index.html" class="t1">
+            <h1>Papeis</h1>
+        </a>
+
+    </div>
+
+    <div style="display: none;" id="key" class="t4">
+
+        <button type="button" onclick="formulario('minhaDivI')" class="link">Adicionar</button>
+
+        <br><br>
+
+        <form class="caixa" id="minhaDivI" style="display:none" action="adicionar" method="get"><br>
+
+            <h1>Adicionar</h1><br>
+
+            <label for="nome">Email</label>
+            <input name="nome" type="email"><br><br>
+
+            <Label>key</Label>
+            <input type="password" name="" id=""><br><br>
+
+            <label for="URL">URL</label>
+            <input type="url" name="" id=""><br><br>
+
+            <textarea style="background: transparent;" name="" id="" cols="30" rows="10"></textarea> <br><br>
+
+            <input type="button" value="Salvar">
+
+        </form>
+
+        <table border="2">
+
+            <tr>
+                <th>Email</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>key</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Anotações</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+        </table>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url(/img/O\ ótimo\ ilustrador\ Quentin\ Fevre\ decidiu\ homenagear\ antigos\ controles\ de\ video\ games\ em\ uma\ série….jpeg)no-repeat;
+}
+
+a{
+    text-decoration: none;
+}
+
+.t1,.t2,.t3,.t4,.t5,.t6,form{
+    padding: 4%;
+    margin: 2%;
+    font-size: 150%;
+    float: left;
+    border: solid black;
+    color: black;
+    text-align: center;
+}
+
+h1,p,div,a,form,li,ul,input,label,table,td{
+    background: transparent;
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+li{
+    list-style: none;
+}
+
+#key{
+    padding: 8%;
+}
+
+.link{
+    background: transparent;
+}
+
+.link:hover{
+    padding: 20%;
+    font-size: 100%;
+    background-color: black;
+    color: white;
+}
