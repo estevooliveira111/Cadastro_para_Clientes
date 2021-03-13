@@ -18,6 +18,15 @@ function formulario(el) {
         document.getElementById(el).style.display = 'none';
     }
 
+
+function key(el) {
+      var display = document.getElementById(el).style.display;
+      if (display == "none")
+        document.getElementById(el).style.display = 'block';
+      else
+        document.getElementById(el).style.display = 'none';
+    }
+    
     var ancoras = document.querySelectorAll('a');
 Array.from(ancoras).forEach(function(a) {
   a.addEventListener('click', scroll);
@@ -27,7 +36,7 @@ function animarScroll(atual, destino) {
   if (atual >= destino) return;
   document.body.scrollTop = atual;
   setTimeout(function() {
-    animarScroll(atual += 50, destino);
+    animarScroll(atual += 1000, destino);
   }, 50);
 }
 
@@ -40,21 +49,6 @@ function scroll(e) {
 }
 
 </script>
-
-
-<style>
-
-
-    .t4 {
-      display: block;
-      height: 200px;
-      margin: 20px;
-      background-color: #dff;
-    }
-    
-    </style>
-    
-    
 
 </head>
 
@@ -69,7 +63,7 @@ function scroll(e) {
 
         </a>
 
-        <a href="#key" class="t1">
+        <a onclick="key('key')"  href="#key" class="t1">
 
             <h1>Chaves</h1>
 
@@ -77,24 +71,24 @@ function scroll(e) {
 
         </a>
 
-        <a class="t1" href="http://">
+        <a class="t1" href="#">
     
             <h1>Bíblia</h1>
     
         </a>
 
-        <a href="/index.html" class="t1">
+        <a href="#" class="t1">
             <h1>Caixas</h1>
 
 
 
         </a>
 
-        <a href="/index.html" class="t1">
+        <a href="#" class="t1">
             <h1>Escritos</h1>
         </a>
 
-        <a href="/index.html" class="t1">
+        <a href="#" class="t1">
             <h1>Papeis</h1>
         </a>
 
