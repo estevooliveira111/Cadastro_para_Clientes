@@ -88,14 +88,14 @@ function scroll(e) {
 
     <div class="initial-scale" >
 
-        <a onclick="projects('projects')" href="#projects" class="t1">
+        <a onclick="projects('projects')" href="#projects" id="first" class="t1">
 
             <h1>Projetos</h1><br><br>
             <p>“Não se trata de ter ideias,<br />  mas sim de levar essas ideias para a vida real.”<br /><br><br>  — Scott Belsky, cofundador do Behance.</p>
 
         </a>
 
-        <a onclick="key('key')"  href="#key" class="t1">
+        <a onclick="key('key')"  href="#key" id="second" class="t1">
 
             <h1>Chaves</h1>
 
@@ -103,31 +103,30 @@ function scroll(e) {
 
         </a>
 
-        <a class="t1" href="#">
+        <a class="t2" href="#">
     
             <h1>Bíblia</h1>
     
         </a>
 
-        <a href="#" class="t1">
+        <a href="#" class="t2">
             <h1>Caixas</h1>
 
 
 
         </a>
 
-        <a href="#" class="t1">
+        <a href="#" class="t2">
             <h1>Escritos</h1>
         </a>
 
-        <a href="#" class="t1">
+        <a href="#" class="t2">
             <h1>Papeis</h1>
         </a>
 
     </div>
 
-    <div id="projects" style="display: none;" class="t3">
-
+    <div style="display: none;" id="projects" class="t3">
 
         <form action="" method="post">
 
@@ -140,7 +139,7 @@ function scroll(e) {
 
     </div>
 
-    <div style="display: none;" id="key" class="t4">
+    <div style="display: none;" id="key" class="t3">
 
         <button type="button" onclick="formulario('minhaDivI')" class="link">Adicionar</button>
 
@@ -168,7 +167,7 @@ function scroll(e) {
         <table border="2">
 
             <tr>
-                <th>Email</th>
+                <th>E-mail</th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -177,7 +176,7 @@ function scroll(e) {
             </tr>
 
             <tr>
-                <th>key</th>
+                <th>Key</th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -194,6 +193,43 @@ function scroll(e) {
             </tr>
             
         </table>
+
+    </div>
+
+    <div style="display: none;" class="biblie">
+
+      <form action="" method="get" class="t3">
+        
+        <h1>Nova Devocional</h1><br><br>
+        <label for="name">Nome</label>
+        <input type="text" name="" id=""><br><br>
+
+        <label for="data">Dia</label>
+        <input type="date" name="" id=""><br><br>
+
+        <select name="" id="">
+
+          <option value="1">Topico 1</option><br><br><input type="text" name="" id=""><br><br>
+
+          <option value="2">Topico 2</option><input type="text" name="" id=""><br><br>
+
+          <option value="3">Topico 3</option><input type="text" name="" id=""><br><br>
+
+          <option value="4">Topico 4</option><input type="text" name="" id=""><br><br>
+
+          <button onclick="adtion_option()" >Adicionar Opções</button>
+
+        </select>
+
+        <br><br><br>
+
+        <textarea style="background: transparent; font-size: 110%;" name="" id=""  cols="30" rows="10">
+
+          Desenvolvimento:
+
+        </textarea>
+        
+      </form>
 
     </div>
 
